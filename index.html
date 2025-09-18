@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Rumah Sakit</title>
+<style>
+/* Reset dasar */
+body {
+  background-color: #FDF6EC; /* krem terang */
+  color: #3E3E3E;            /* teks abu gelap */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #8D6E63; /* cokelat muda */
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 {
+  margin-left: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* Hero Section */
+.hero-section {
+  background: #FAF3E0; /* putih gading */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #8D6E63; /* cokelat muda */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #3E3E3E;
+  background-color: #fdfdff;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 1rem auto;
+  line-height: 1.6;
+  box-shadow: 2px 3px 7px rgba(0,0,0,0.1);
+}
+
+/* Tombol */
+.rounded-btn {
+  background-color: #A3B18A; /* hijau lembut */
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rounded-btn:hover {
+  background-color: #5DA9E9; /* biru lembut */
+}
+
+/* Medicine Section */
+.medicine-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #FDF6EC;
+}
+
+.medicine-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #8D6E63;
+}
+
+.medicine-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.medicine-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #FAF3E0;
+}
+
+.medicine-item img {
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.medicine-item p {
+  padding: 0.5rem;
+  background-color: #FDF6EC;
+  margin: 0;
+  color: #3E3E3E;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Testimony Section */
+.testimony-section {
+  padding: 2rem;
+  background-color: #FAF3E0;
+  text-align: center;
+}
+
+.testimony-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #8D6E63;
+}
+
+.testimony-grid {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.testimony-item {
+  text-align: center;
+  background-color: #FDF6EC;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimony-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+  margin-bottom: 1rem;
+}
+
+.testimony-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #8D6E63;
+}
+
+.testimony-item p {
+  color: #3E3E3E;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  background-color: #8D6E63; /* cokelat muda */
+  color: #fff;
+  padding: 2rem;
+}
+
+.footer-left h3 {
+  margin: 0;
+}
+
+.footer-left p {
+  font-size: 0.9rem;
+  color: #f0f0f0;
+}
+
+.footer-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.footer-grid h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-grid li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-grid a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.footer-botom-reserved {
+  font-size: 16px;
+}
+
+</style>
+</head>
+<body>
+  <header>
+  <div class="logo">
+    <h1>Kamar Sehat Akbar</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="">Beranda</a></li>
+      <li><a href="https://rs.ui.ac.id/umum/pasien-pengunjung/cari-dokter">Daftar Dokter</a></li>
+      <li><a href="https://www.linkedin.com/in/muhammad-choerul-akbar-72b2a4325/">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero-section">
+      <div class="hero-content">
+        <h3>Rumah Sakit Sejahtera</h3>
+        <p>
+          Mending kalian cepet cek ke dokter daripada tiba-tiba gagal ginjal
+        </p>
+        <button class="rounded-btn" onclick="window.open('https://www.linkedin.com/in/muhammad-choerul-akbar-72b2a4325/', '_blank')">
+  Lihat Dokter
+</button>
+
+      </div>
+    </section>
+    <section class="medicine-section">
+      <h3>Doctors Professional</h3>
+      <div class="medicine-grid">
+        <div class="medicine-item">
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQHMUgMk9LK8-Q/profile-displayphoto-shrink_200_200/B56ZU_597rGoAY-/0/1740533916114?e=1761177600&v=beta&t=q3INQ8ftW6ALnOAa3sKuXJ370CIYlNyOdokCvyV_Kzc" alt="Doctors 1">
+          <p>Doctors 1</p>
+        </div>
+        <div class="medicine-item">
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQHMUgMk9LK8-Q/profile-displayphoto-shrink_200_200/B56ZU_597rGoAY-/0/1740533916114?e=1761177600&v=beta&t=q3INQ8ftW6ALnOAa3sKuXJ370CIYlNyOdokCvyV_Kzc" alt="Doctors 2">
+          <p>Doctor 2</p>
+        </div>
+        <div class="medicine-item">
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQHMUgMk9LK8-Q/profile-displayphoto-shrink_200_200/B56ZU_597rGoAY-/0/1740533916114?e=1761177600&v=beta&t=q3INQ8ftW6ALnOAa3sKuXJ370CIYlNyOdokCvyV_Kzc" alt="Doctors 3">
+          <p>Doctors 3</p>
+        </div>
+        <div class="medicine-item">
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQHMUgMk9LK8-Q/profile-displayphoto-shrink_200_200/B56ZU_597rGoAY-/0/1740533916114?e=1761177600&v=beta&t=q3INQ8ftW6ALnOAa3sKuXJ370CIYlNyOdokCvyV_Kzc" alt="Doctors 4">
+          <p>Doctors 4</p>
+        </div>
+      </div>
+    </section>
+    <section class="testimony-section">
+  <h3>Testimoni Pasien</h3>
+  <div class="testimony-grid">
+    <div class="testimony-item">
+      <img src="https://acehnesia.com/wp-content/uploads/2022/08/Orang-Utan-jantan.jpg" alt="Alok">
+      <h4>Alok</h4>
+      <p>Kalo sakit mata kesini aja!!</p>
+    </div>
+    <div class="testimony-item">
+      <img src="https://acehnesia.com/wp-content/uploads/2022/08/Orang-Utan-jantan.jpg" alt="habib bahar bin smith">
+      <h4>habib bahar bin smith</h4>
+      <p>Cek kodam disini aja.</p>
+    </div>
+    <div class="testimony-item">
+      <img src="https://acehnesia.com/wp-content/uploads/2022/08/Orang-Utan-jantan.jpg" alt="FarhanXXXTENTACTION">
+      <h4>FarhanXXXTENTACTION</h4>
+      <p>Saya merasa sangat puas dengan hasil pengobatan di Rumah Sehat ini.</p>
+    </div>
+    <div class="testimony-item">
+      <img src="https://acehnesia.com/wp-content/uploads/2022/08/Orang-Utan-jantan.jpg" alt="fattajah(kerenkali)">
+      <h4>fattajah(kerenkali)</h4>
+      <p>Rumah Sehat ini adalah tempat terbaik untuk mendapatkan perawatan kesehatan.</p>
+    </div>
+  </div>
+</section>
+
+    <footer>
+    <div class="footer-left">
+      <h3>Nama Website</h3>
+      <p>Memberi Layanan Kesehatan Terbaik untuk Kesejahteraan Anda</p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-grid">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#">Pelayanan Kesehatan</a></li>
+          <li><a href="#">Pendaftaran Online</a></li>
+          <li><a href="#">Konsultasi Dokter</a></li>
+        </ul>
+      </div>
+      <div class="footer-grid">
+        <h4>Tentang</h4>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Kontak</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+      <div class="footer-grid">
+        <h4>Lokasi</h4>
+        <ul>
+          <li><a href="#">Alamat</a></li>
+          <li><a href="#">Jam Operasional</a></li>
+          <li><a href="#">Peta Lokasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-botom-reserved">All Rights Reserved 2023 - Rumah Sakit XYZ</p>
+    </div>
+  </footer>
+</body>
+</html>
