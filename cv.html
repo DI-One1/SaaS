@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio — Muhammad Choerul Akbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        :root {
+            --blue-light: #a8d0ff;
+
+            --blue-lighter: #e8f0ff;
+            --text-dark: #2c3e50;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--blue-lighter);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            width: 100%;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 16px var(--shadow);
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, var(--blue-light), var(--blue-lighter));
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--blue-light);
+            margin-bottom: 15px;
+        }
+
+        .sidebar h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .sidebar .title {
+            color: #5471a5;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .socials a {
+            color: var(--blue-light);
+            font-size: 20px;
+            margin: 0 8px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .socials a:hover {
+            color: #6fa1ff;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--blue-light);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 25px;
+            box-shadow: 0 4px 10px rgb(104, 167, 243);
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background: #6fa1ff;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--blue-light);
+            border-bottom: 2px solid var(--blue-light);
+            padding-bottom: 5px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--blue-lighter);
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-list span {
+            background: var(--blue-lighter);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+            color: var(--blue-light);
+            border: 1.5px solid var(--blue-light);
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        input,
+        textarea {
+            border: 1px solid var(--blue-light);
+            border-radius: 10px;
+            padding: 10px;
+            font-family: inherit;
+            color: var(--text-dark);
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+
+        button.btn {
+            width: fit-content;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 850px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                border-bottom: 1px solid var(--blue-light);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQHMUgMk9LK8-Q/profile-displayphoto-shrink_200_200/B56ZU_597rGoAY-/0/1740533916114?e=1762992000&v=beta&t=JfkRfsywMV55t9I-fvumbpzgAJpMmglmjGWKcZ63jqo"
+                alt="Foto Profil" class="profile-pic" />
+            <h1>Muhammad Choerul Akbar</h1>
+            <p class="title">Programming, UI/UX Design Enthusiast</p>
+            <div class="socials">
+                <a href="https://www.instagram.com/_.eleventh/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-choerul-akbar-72b2a4325/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/DI-One1" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <a href="#contact" class="btn">Contact Me!</a>
+        </aside>
+
+        <main class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    Antusias dan bersemangat di bidang Programming dan UI/UX Design. Selalu berusaha untuk terus belajar
+                    dan mengembangkan kemampuan dalam membuat solusi kreatif dan efektif yang dapat membantu menyelesaikan
+                    masalah nyata.
+                </p>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>☁️ Weather Widget</h3>
+                        <p>
+                            Sebuah website cuaca sederhana yang menampilkan informasi waktu, suhu, kondisi cuaca secara real-time dengan tampilan yang bersih dan mudah digunakan.
+                        </p>
+                    </div>
+                    <div class="project-card">
+                        <h3>💳 Digital ID Card</h3>
+                        <p>
+                            Sistem kartu identitas digital modern yang memungkinkan pembuatan dan pengelolaan ID secara cepat dan mudah, dengan desain yang bersih dan intuitif.
+                        </p>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://akbar-paa-s.vercel.app/">🍜 Food Recommendation Website</a>
+                        <p>
+                            Website rekomendasi makanan sederhana yang membantu pengguna menemukan pilihan makanan sesuai preferensi mereka dengan antarmuka yang ramah dan responsif.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>C++</span>
+                    <span>React</span>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Interested in collaborating? Please send a message using the form below 💌</p>
+                <form>
+                    <input type="text" placeholder="Name" required />
+                    <input type="email" placeholder="Email" required />
+                    <textarea placeholder="Message..." required></textarea>
+                    <button type="submit" class="btn">Send!</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
