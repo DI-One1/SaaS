@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar JavaScript Modern</title>
+    <title>Aplikasi To-Do List Modern</title>
 </head>
-<body>
-    <h1>Javascript Modern, lihat di inspeksi</h1>
-    <script type="module" src="apk.js"></script>
+<body style="font-family: Arial, sans-serif; padding: 20px; max-width: 400px; margin: auto;">
+
+    <h2>Daftar Tugas Saya</h2>
+    
+    <div style="margin-bottom: 20px;">
+        <input type="text" id="input-tugas" placeholder="Tulis tugas baru..." style="padding: 8px; width: 70%;">
+        <button id="tombol-tambah" style="padding: 8px 15px;">Tambah</button>
+    </div>
+    
+    <ul id="list-container" style="list-style-type: none; padding: 0;">
+    </ul>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
