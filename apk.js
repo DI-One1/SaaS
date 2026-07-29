@@ -27,3 +27,5 @@ console.log("Semua Stok Sepatu:", hasilGabung.semuaSepatu);
 
 console.log("Data Produk Lengkap:", hasilGabung.produkLengkap); 
 // Output: Data Produk Lengkap: { id: 101, nama: 'Sepatu Running', harga: 500000, stok: 15 }
+window.produkBaruGlobal = produkBaru;
+window.infoProdukGlobal = infoProduk;
